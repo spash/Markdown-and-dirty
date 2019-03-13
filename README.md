@@ -9,3 +9,7 @@ Local governments are tasked with protecting the public from these illnesses. Th
 
 Our goal is to explore how people’s eating behaviors are influenced by health risks by revealing connections between food safety versus price, popularity, and location.
 
+### Data Sources
+To accomplish our stated goal, we obtained restaurant health records from King County’s Food Establishment Inspection dataset, [found here](https://data.kingcounty.gov/Health-Wellness/Food-Establishment-Inspection-Data/f29f-zza5). King County contains Seattle.
+
+We then compared these food safety records with public perception data. We get these data from Zomato, an aggregator of restaurant review and user-generated information, which functions similarly to Yelp and Google Maps. [Link to data here](https://data.kingcounty.gov/Health-Wellness/Food-Establishment-Inspection-Data/f29f-zza5).
