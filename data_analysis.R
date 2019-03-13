@@ -15,3 +15,44 @@ num_ratings_vs_health <- combined_zomato_fs %>%
   select(name, location.zipcode, user_rating.votes, Inspection.Score, Inspection.Result) %>% 
   filter(Inspection.Result == "Unsatisfactory" | Inspection.Result == "Satisfactory")
 
+
+# ggplot for this data:
+# ggplot(data = num_ratings_vs_health) +
+#  geom_point(mapping = aes(x = Inspection.Score, y= user_rating.votes, color = Inspection.Result))
+# Include a widget that allows the user to input which zip code they want to see data from
+
+
+avg_unsat <- mean(filter(num_ratings_vs_health, Inspection.Result == "Unsatisfactory")$user_rating.votes)
+
+avg_sat <- mean(filter(num_ratings_vs_health, Inspection.Result == "Satisfactory")$user_rating.votes)
+
+med_unsat <- median(filter(num_ratings_vs_health, Inspection.Result == "Unsatisfactory")$user_rating.votes)
+
+med_sat <- median(filter(num_ratings_vs_health, Inspection.Result == "Satisfactory")$user_rating.votes)
+
+
+# My question: In King County, do people speak out about restaurants that have unsatisfactory health ratings
+# by leaving a review?
+
+# The visuals above show the number of user reviews by the inspection score, which ranges from 0-80.
+# The lower the inspection score, the better, as you get points for every violation.
+# For the most part, it appears that restaurants receive an inspection result of unsatisfactory
+# if it has an inspection score of 15 or more, while those receive an inspection result
+# of satisfactory if they are less than 15. However, there are some outliers who go against this
+# observation. For those that have an inspection score that is 15 or more but are satisfactory,
+# these restaruants must have a lot of minor violations that add up to a higher score, but in the end
+# are too minor for the restaurant to be unsatisfactory. Contrarily, those that have less than 15
+# but are considered unsatisfactory must have a few major violations that lead to them 
+# being unsatisfactory, regardless of their low score. 
+
+# To answer my question, on average, each unsatisfactory restaurant has about 93 user reviews,
+# while each satisfactory restaurant has about 77 user reviews. Because there is an outlier
+# in the 98122 data, checking the median might be a better option, as the median is less affected
+# by outliers. The median for unsatisfactory restaurants is about 44 user reviews and
+# the median for satisfactory restaurants is about 35 user reviews. From both these values,
+# we can clearly see that unsatisfactory restaurants receive more user reviews than 
+# satisfactory restaurants do. Thus, this proves that people in King County do indeed
+# speak out more about restaurants that have unsatisfacoty health ratings by leaving a review.
+
+
+
