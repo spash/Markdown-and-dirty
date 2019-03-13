@@ -83,6 +83,18 @@ shivani_response <- p(" The plot above shows customer reviews (out of 5) plotted
                       condtions might be unhygenic. Therefore, we need to make more people aware of health inspection scores, what they mean, 
                       and how eating at a restaurant with a high inspection score can effect a person's health")
 
+tyler_response <- p("Overview:
+
+Our question was on whether the safety of an area can determine the health rating of a restaurant and or food establishment. We developed a crime map to showcase the overall crime rate for each zip code located in the King County area of Washington by using a color scale. We also developed a bar graph that allows the users to select the desired zip code and view the results of the inspections score. Both those visuals together allow the viewer to interpret and view the data in combination with each other to locate the pattern between safety and health. 
+
+Findings:
+
+While for the most part, the safety of an area does tend to somewhat predict the potential health inspection score of a restaurant and or food establishment, however, upon closer review, there are certain areas that have higher crime rates but tend to have generally satisfactory inspection results, such as the zip codes 98125 and 98108. And then there are others which are the opposite such as our very own 98105 with has slightly lower rates, but very mixed responses in terms of health inspection ratings.")
+
+
+url <- a("dataset", href="https://data.kingcounty.gov/Health-Wellness/Food-Establishment-Inspection-Data/f29f-zza5")
+url1 <- a("here", href="https://data.kingcounty.gov/Health-Wellness/Food-Establishment-Inspection-Data/f29f-zza5")
+url2 <- a("Zomato", href="https://developers.zomato.com/api#headline1")
 
 
 
