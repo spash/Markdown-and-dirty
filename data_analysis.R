@@ -72,7 +72,16 @@ shivani_response <- p(" The plot above shows customer reviews (out of 5) plotted
                       answer the following questions: 
                       Do customers care about health inspections when they go to restaurants?
                       Do they look at the hygenic conditions of the restaurant where the food is made or do they only care about the taste of the food?
-                      Looking at the data above, it seems that for the most part, restaurants with higher food ratings seem to have lower inspection scores")
+                      Looking at the data above, it seems that for the most part, restaurants with higher food ratings seem to have lower inspection scores. 
+                      This is because a lower inspection result means that the restaurant had lesser faults (thus less points for wrongs). 
+                      But, looking at the data, we can see that there are a lot of restaurants that have an above average rating (> 3.0) 
+                      yet have 20 or more points in their inspection scores. This means that customers might not either be aware of the health 
+                      inspection scores resulting in them only critiquing the restaurant based on the taste of the food, apparant quality
+                      of the food, ambiance of the restaurant. This shows us that a restaurant may have great food with a pretty exterior yet 
+                      still be unsatisfactory in terms of health ratings. This is because customers do not know what goes on in the kitchen 
+                      and so a restaurant might serve great tasting food but the ingredients they use might not be healthy or their cooking
+                      condtions might be unhygenic. Therefore, we need to make more people aware of health inspection scores, what they mean, 
+                      and how eating at a restaurant with a high inspection score can effect a person's health")
 
 
 
