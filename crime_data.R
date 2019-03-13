@@ -12,7 +12,7 @@ library("plyr")
 
 
 ##Filter and Clean the Data
-inspection_data <- read.csv("Food_safety_2018_zipcodes", stringsAsFactors = FALSE)
+inspection_data <- read.csv("Food_safety_2018_zipcodes.csv", stringsAsFactors = FALSE)
 inspection_data <- inspection_data %>%
   distinct(Address, .keep_all = TRUE)
 
