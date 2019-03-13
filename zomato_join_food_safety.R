@@ -5,12 +5,16 @@ library("tidyr")
 #dataframe
 
 #add zomato data frame
-zomato_df <- read.csv("zomato_restaurants_in_zipcodes", stringsAsFactors = FALSE)
+
+zomato_df <- read.csv("zomato_restaurants_in_zipcodes.csv", stringsAsFactors = FALSE)
+
 
 #zomato_df <- zomato_df %>% select(-X) #remove row.names # NOTE: if starting from scractch .csv, run this
 
 #add food safety data frame
-food_safety_df <- read.csv("Food_safety_2018_zipcodes", stringsAsFactors = FALSE)
+
+food_safety_df <- read.csv("Food_safety_2018_zipcodes.csv", stringsAsFactors = FALSE)
+
 food_safety_df <- food_safety_df %>% 
   distinct(Address, .keep_all = TRUE)
 
