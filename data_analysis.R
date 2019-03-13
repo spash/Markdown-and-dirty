@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Shivani
 library("dplyr")
 library("tidyr")
