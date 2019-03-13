@@ -1,5 +1,3 @@
-
-
 # Project Documentation
 
 Created by: Jordan Auerbach, Shivani Joshi, Stephen Sherwood, Tyler Treat
