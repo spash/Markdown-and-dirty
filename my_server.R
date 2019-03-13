@@ -53,4 +53,19 @@ my_server <- function(input, output) {
     
     price_graph
   })
+  
+  output$number_plot <- renderPlot({
+    
+    filtered_number <- num_ratings_vs_health %>% 
+      filter(location.zipcode == input$seattle_zips)
+      
+      number_graph <- ggplot(data = filtered_number) +
+        geom_point(mapping = aes(x = Inspection.Score, y= user_rating.votes, color = Inspection.Result)) +
+        labs(title = "number of user reviews vs health inspection score",
+             x = "health inspection score",
+             y = "number of user reviews")
+      
+      number_graph
+      
+  })
 }
