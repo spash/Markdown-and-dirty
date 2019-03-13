@@ -9,3 +9,7 @@ reviews_Vs_safety <- combined_df %>%
 
 seattle_zip <- c("98102","98104","98105","98107","98108","98109",
                "98116","98118","98119","98122","98125","98144")
+
+review_range <- range(reviews_Vs_safety$user_rating.aggregate_rating)
+health_inspection_range <- range(reviews_Vs_safety$Inspection.Score)
+
