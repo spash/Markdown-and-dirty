@@ -1,8 +1,8 @@
 library("jsonlite")
-source("apikeys.R")
 library("dplyr")
+source("apikeys.R")
 
-# working zipcodes
+# working zipcodes 
 zipcodes <- c(98102,98104,98105,98107,98108,98109,98116,98118,98119,98122,98125,98144)
 
 # set up base url and endpoint
