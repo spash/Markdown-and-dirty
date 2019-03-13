@@ -1,5 +1,4 @@
 source("data_analysis.R")
-source("crime_data.R")
 
 
 my_server <- function(input, output) {
@@ -70,23 +69,6 @@ my_server <- function(input, output) {
       
   })
   
-  output$my_map <- renderLeaflet({
-
-    leaflet(wacounties)%>% setView(lng = -122.335167, lat = 47.6062, zoom = 11) %>%
-      addTiles() %>%
-      addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 1,
-                  fillColor = ~pal(log10(zip_count$freq)),
-                  label = wacounties$ZIPCODE) %>%
-      addLegend(pal = pal, values = ~log10(zip_count$freq), opacity = 1.0,
-                labFormat = labelFormat(transform = function(x) round(10^x))) 
-    
-    filtered_number <- health_rates%>% 
-      filter(Zip.Code == input$county_zip)
-    
-    result <- ggplot(data = health_rates) +
-      geom_bar(mapping = aes(x = Inspection.Result, fill = Inspection.Result))
-    
-  })
   
   output$tab <- renderUI({
     paste0("To accomplish our stated goal, we obtained restaurant health records from King County’s Food Establishment Inspection ", url, ".")

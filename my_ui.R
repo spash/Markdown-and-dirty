@@ -1,5 +1,4 @@
 source("data_analysis.R")
-source("crime_data.R")
 
 my_ui <- fluidPage(
   titlePanel("Health inspection results of restaurants in King County"),
@@ -79,23 +78,6 @@ my_ui <- fluidPage(
       )
     ),
     tabPanel(
-      "Map King County",
-      
-      sidebarLayout(
-        sidebarPanel(
-          h2("Predicting Health Rating Based on Location Safety"),
-          selectInput(
-            inputId = "county_zip", label = "Zip codes of county",
-            choices = seattle_zip, selected = "zipcode"
-          )
-        ),
-        
-        mainPanel(
-          plotOutput(outputId = "number_plot"), tyler_response
-        )
-      )
-    ),
-    tabPanel(
       "Conclusion", 
       h2("Created by: "),
       p("Jordan Auerbach, Shivani Joshi, Stephen Sherwood, Tyler Treat"),
@@ -110,7 +92,7 @@ my_ui <- fluidPage(
         Our goal is to explore how people’s eating behaviors are influenced by health risks by revealing connections between food safety versus price,
         popularity, and location."),
       h2("Data Sources"),
-      plotOutput(outputId = "tab")
+      uiOutput(outputId = "tab")
       
     )  
   )
