@@ -5,9 +5,9 @@ account: shivani488
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 788081
-bundleId: 1937837
+bundleId: 1938249
 url: https://shivani488.shinyapps.io/Markdown-and-dirty/
-when: 1552513803.85027
+when: 1552526923.96256
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: Crime Data.csv|crime_data.R

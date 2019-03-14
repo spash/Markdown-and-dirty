@@ -9,7 +9,7 @@ To accomplish our stated goal, we obtained restaurant health records from King C
 <a href= "https://data.kingcounty.gov/Health-Wellness/Food-Establishment-Inspection-Data/f29f-zza5"> dataset</a>
 King County contains Seattle.
 We then compared these food safety records with public perception data. We get these data from Zomato, an aggregator of restaurant review and user-generated information, which functions similarly to Yelp and Google Maps.
-<a href= "href="https://developers.zomato.com/api#headline1"> zomato</a>
+<a href= "href="https://developers.zomato.com/api"> zomato</a>
 
 
 
