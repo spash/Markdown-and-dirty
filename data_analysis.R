@@ -1,4 +1,3 @@
-
 library("dplyr")
 library("tidyr")
 library("dplyr")
@@ -65,7 +64,10 @@ price_vs_health <- combined_df %>%
   select(c(name, average_cost_for_two, Grade, location.zipcode))
 
 
-#stephen_response <- p("")
+stephen_response <- p("The graphics show consistent groupings around various food safety grades. This pattern is due to technical quirks that cause 
+                      food grades to fall into common numeric amounts. There are some outliers in price (some restaurants are very expensive!) 
+                      but the overall trend is that there is little correlation between the food safety violations recorded by investigators and the 
+                      cost of a meal: customers cannot buy their way into safety with much confidence. ")
 
 
 shivani_response <- p(" The plot above shows customer reviews (out of 5) plotted against health inspection ratings. The purpose of this is to 
@@ -83,22 +85,15 @@ shivani_response <- p(" The plot above shows customer reviews (out of 5) plotted
                       condtions might be unhygenic. Therefore, we need to make more people aware of health inspection scores, what they mean, 
                       and how eating at a restaurant with a high inspection score can effect a person's health")
 
-tyler_response <- p("Overview:
-
-Our question was on whether the safety of an area can determine the health rating of a restaurant and or food establishment. We developed a crime map to showcase the overall crime rate for each zip code located in the King County area of Washington by using a color scale. We also developed a bar graph that allows the users to select the desired zip code and view the results of the inspections score. Both those visuals together allow the viewer to interpret and view the data in combination with each other to locate the pattern between safety and health. 
-
-Findings:
-
-While for the most part, the safety of an area does tend to somewhat predict the potential health inspection score of a restaurant and or food establishment, however, upon closer review, there are certain areas that have higher crime rates but tend to have generally satisfactory inspection results, such as the zip codes 98125 and 98108. And then there are others which are the opposite such as our very own 98105 with has slightly lower rates, but very mixed responses in terms of health inspection ratings.")
-
-
-url <- a("dataset", href="https://data.kingcounty.gov/Health-Wellness/Food-Establishment-Inspection-Data/f29f-zza5")
-url1 <- a("here", href="https://data.kingcounty.gov/Health-Wellness/Food-Establishment-Inspection-Data/f29f-zza5")
-url2 <- a("Zomato", href="https://developers.zomato.com/api#headline1")
-
-
-
-
+overview <- p("Foodborne illnesses affect 48 million people in the United States annually, with over 68% of outbreaks originating from 
+              restaurants. Because this is such a serious issue, we wondered how much people consider what they consume.
+              Our data is constrained to food safety violations conducted by the King County health records, and Seattle area restaurants social data. 
+              Data specific to health inspection scores ordered by zip code is seen at left, which depicts the variance between food safety 
+              scores (lower is better: each number is a count of health code violations). Customer review analysis can be found under the 
+              'Customer Reviews' tab, with price range and number of listings analysis within their respective tabs. Data sources are under the'Conclusion' tab.
+              From our analysis, it appears there is little correlation between people’s consumption preferences and food safety. 
+              This could be because, over all, the local government prioritizes food safety and performs its job well. However, it could also
+              be that food-borne illnesses are difficult to track to their sources.")
 
 
 

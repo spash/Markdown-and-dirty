@@ -2,6 +2,7 @@ library("shiny")
 library("ggplot2")
 library("leaflet")
 library("dplyr")
+library("tidyr")
 
 
 source("data_analysis.R")

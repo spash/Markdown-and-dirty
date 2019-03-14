@@ -11,6 +11,7 @@ my_ui <- fluidPage(
       sidebarLayout(
         sidebarPanel(
           h2("Health Inspection Scores of Restaurants"),
+          overview,
           selectInput(
             inputId = "zip", label = "Zip codes of restaurants",
             choices = seattle_zip, selected = "zipcode"
@@ -56,7 +57,7 @@ my_ui <- fluidPage(
         ),
         
         mainPanel(
-          plotOutput(outputId = "price_plot")
+          plotOutput(outputId = "price_plot"), stephen_response
         )
       )
     ),
@@ -92,7 +93,7 @@ my_ui <- fluidPage(
         Our goal is to explore how people’s eating behaviors are influenced by health risks by revealing connections between food safety versus price,
         popularity, and location."),
       h2("Data Sources"),
-      uiOutput(outputId = "tab")
+      includeMarkdown("hyperlinks.rmd")
       
     )  
   )

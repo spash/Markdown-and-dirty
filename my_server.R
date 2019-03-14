@@ -70,11 +70,5 @@ my_server <- function(input, output) {
   })
   
   
-  output$tab <- renderUI({
-    paste0("To accomplish our stated goal, we obtained restaurant health records from King County’s Food Establishment Inspection ", url, ".")
-    paste0("We got our crime data from ", url1, ".")
-    paste0("We then compared these food safety records with public perception data. We get these data from ", url2, " an aggregator of restaurant review and user-generated information, which functions similarly to Yelp and Google Maps.")
-  })
-  
 }
 
