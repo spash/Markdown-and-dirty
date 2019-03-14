@@ -25,8 +25,9 @@ my_server <- function(input, output) {
       filter(Inspection.Score > input$inspection[1] & Inspection.Score < input$inspection[2])
     
     
-    review_graph <- ggplot(data = filtered_review) +
-      geom_point(mapping = aes(x = Inspection.Score, y = user_rating.aggregate_rating, color = location.zipcode)) +
+    review_graph <- ggplot(data = filtered_review, aes(x = Inspection.Score, y = user_rating.aggregate_rating, color = location.zipcode)) +
+      geom_point() +
+      geom_smooth(method=lm) +
       labs(
         title = "Customer reviews vs. health inspection score",
         x = "Inspection Score",

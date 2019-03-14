@@ -1,6 +1,7 @@
 library("dplyr")
 library("tidyr")
 library("dplyr")
+library("shiny")
 
 source("apikeys.R")
 source("zomato_join_food_safety.R")
@@ -58,6 +59,8 @@ seattle_zip <- c("98102","98104","98105","98107","98108","98109",
 review_range <- range(reviews_Vs_safety$user_rating.aggregate_rating)
 health_inspection_range <- range(reviews_Vs_safety$Inspection.Score)
 
+average_customer <- mean(reviews_Vs_safety$user_rating.aggregate_rating)
+
 
 #stephen
 price_vs_health <- combined_df %>% 
@@ -77,7 +80,11 @@ shivani_response <- p(" The plot above shows customer reviews (out of 5) plotted
                       Looking at the data above, it seems that for the most part, restaurants with higher food ratings seem to have lower inspection scores. 
                       This is because a lower inspection result means that the restaurant had lesser faults (thus less points for wrongs). 
                       But, looking at the data, we can see that there are a lot of restaurants that have an above average rating (> 3.0) 
-                      yet have 20 or more points in their inspection scores. This means that customers might not either be aware of the health 
+                      yet have 20 or more points in their inspection scores. The mean score of customer review is 3.22. This shows that
+                      the restaurants are generally rated above average, further proving our point. In a perfect data, as the health inspection
+                      score increases, the customer review scores would decrease. But looking at our data, we can see that the line of 
+                      correlation is a horizontal line - meaning that there is no correlation between the health inspection scores and the 
+                      customer reviews.This means that customers might not either be aware of the health 
                       inspection scores resulting in them only critiquing the restaurant based on the taste of the food, apparant quality
                       of the food, ambiance of the restaurant. This shows us that a restaurant may have great food with a pretty exterior yet 
                       still be unsatisfactory in terms of health ratings. This is because customers do not know what goes on in the kitchen 
